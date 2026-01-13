@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Student Portal Login</title>
+        <script
+            src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet" />
+        <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+        <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .ios-blur {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+    </style>
+        <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+    </head>
+    <body
+        class="bg-background-light dark:bg-background-dark min-h-screen flex items-center justify-center p-4">
+        <div
+            class="relative flex h-[844px] w-[390px] flex-col bg-background-light dark:bg-background-dark group/design-root overflow-hidden rounded-[3rem] border-[8px] border-zinc-800 shadow-2xl">
+            <!-- Status Bar Spacer (iOS Style) -->
+            <div class="h-11 w-full"></div>
+            <!-- Background Image/Gradient Section -->
+            <div
+                class="absolute inset-0 z-0 h-1/2 w-full bg-gradient-to-b from-primary/20 to-transparent">
+                <div
+                    class="w-full h-full bg-center bg-no-repeat bg-cover opacity-20"
+                    data-alt="Blurred architectural sketch of a modern university campus building"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCO-6Pmhq6dIfho8Hrq7J_I_Es89NLnFOZPXUWxfn9O7QS243cK2-A0yTQKFzE5h0F4mz7RrkTEQrq-Hq-ojw6WWLIZrXcfJM2A0so0ghh60y83S-O0ZbPxZX_Pq_l1o5rqeIbbIWdVwz8mjjnRzgAYtxmVLoZDSQajavusnCql2sQ865zTm7f-kKgg2VJxq2wTefChU13pc0oILa6NuiDmNWphkZw9V1dIqYdbQD0_uPOzWSIamD0Ueh4PVus8xWQ8aIw8JB5oQVk");'>
+                </div>
+            </div>
+            <!-- Main Content Container -->
+            <div class="relative z-10 flex flex-col w-full h-full px-6 pt-12">
+                <!-- School Logo & Header -->
+                <div class="flex flex-col items-center mb-8">
+                    <div
+                        class="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center shadow-lg mb-6">
+                        <span
+                            class="material-symbols-outlined text-white text-5xl">school</span>
+                    </div>
+                    <h1
+                        class="text-zinc-900 dark:text-white tracking-tight text-[32px] font-bold leading-tight text-center">Student
+                        Portal</h1>
+                    <p
+                        class="text-zinc-600 dark:text-zinc-400 text-base font-normal leading-normal text-center mt-2">Welcome
+                        back, scholar.</p>
+                </div>
+                <!-- Login Form -->
+                <div class="space-y-4">
+                    <!-- Student ID Field -->
+                    <div class="flex flex-col">
+                        <p
+                            class="text-zinc-700 dark:text-zinc-300 text-sm font-medium leading-normal pb-2 ml-1">Student
+                            ID</p>
+                        <div
+                            class="flex w-full items-stretch rounded-xl overflow-hidden shadow-sm">
+                            <div
+                                class="bg-white/50 dark:bg-zinc-800/50 flex border border-r-0 border-zinc-200 dark:border-zinc-700 items-center justify-center pl-4">
+                                <span
+                                    class="material-symbols-outlined text-zinc-400 text-[24px]">person</span>
+                            </div>
+                            <input
+                                class="form-input flex w-full min-w-0 flex-1 border border-zinc-200 dark:border-zinc-700 bg-white/50 dark:bg-zinc-800/50 text-zinc-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 focus:border-primary h-14 placeholder:text-zinc-400 dark:placeholder:text-zinc-500 px-4 text-base font-normal leading-normal border-l-0 rounded-r-xl"
+                                placeholder="Enter your ID" type="text" />
+                        </div>
+                    </div>
+                    <!-- Password Field -->
+                    <div class="flex flex-col">
+                        <p
+                            class="text-zinc-700 dark:text-zinc-300 text-sm font-medium leading-normal pb-2 ml-1">Password</p>
+                        <div
+                            class="flex w-full items-stretch rounded-xl overflow-hidden shadow-sm">
+                            <div
+                                class="bg-white/50 dark:bg-zinc-800/50 flex border border-r-0 border-zinc-200 dark:border-zinc-700 items-center justify-center pl-4">
+                                <span
+                                    class="material-symbols-outlined text-zinc-400 text-[24px]">lock</span>
+                            </div>
+                            <input
+                                class="form-input flex w-full min-w-0 flex-1 border border-zinc-200 dark:border-zinc-700 bg-white/50 dark:bg-zinc-800/50 text-zinc-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 focus:border-primary h-14 placeholder:text-zinc-400 dark:placeholder:text-zinc-500 px-4 text-base font-normal leading-normal border-l-0"
+                                placeholder="Enter your password"
+                                type="password" />
+                            <div
+                                class="bg-white/50 dark:bg-zinc-800/50 flex border border-l-0 border-zinc-200 dark:border-zinc-700 items-center justify-center pr-4 rounded-r-xl">
+                                <span
+                                    class="material-symbols-outlined text-zinc-400 cursor-pointer">visibility</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Forgot Password -->
+                    <div class="flex justify-end pr-1">
+                        <a
+                            class="text-primary text-sm font-medium hover:underline"
+                            href="#">Forgot Password?</a>
+                    </div>
+                </div>
+                <!-- Action Buttons -->
+                <div class="mt-10 flex flex-col gap-4">
+                    <button
+                        class="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-4 rounded-xl shadow-lg shadow-primary/30 transition-all flex items-center justify-center gap-2">
+                        <a href="./studentlogin.html" style="text-decoration: none;">Sign In</a>
+                    </button>
+                    <div class="flex items-center gap-4 py-2">
+                        <div
+                            class="h-[1px] flex-1 bg-zinc-200 dark:bg-zinc-800"></div>
+                        <span
+                            class="text-xs text-zinc-400 uppercase tracking-widest font-bold">Or</span>
+                        <div
+                            class="h-[1px] flex-1 bg-zinc-200 dark:bg-zinc-800"></div>
+                    </div>
+                    <!-- Biometric Options -->
+                    <div class="flex justify-center gap-6">
+                        <button
+                            class="w-14 h-14 rounded-full bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center shadow-sm hover:scale-105 transition-transform">
+                            <span
+                                class="material-symbols-outlined text-primary text-3xl">face</span>
+                        </button>
+                        <button
+                            class="w-14 h-14 rounded-full bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center shadow-sm hover:scale-105 transition-transform">
+                            <span
+                                class="material-symbols-outlined text-primary text-3xl">fingerprint</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Footer -->
+                <div class="mt-auto pb-10 flex flex-col items-center">
+                    <p class="text-zinc-500 dark:text-zinc-500 text-sm">Don't
+                        have an account?</p>
+                    <button
+                        class="mt-1 text-primary font-semibold hover:underline">Contact
+                        Registrar</button>
+                </div>
+                <!-- iOS Home Indicator -->
+                <div
+                    class="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-zinc-300 dark:bg-zinc-800 rounded-full"></div>
+            </div>
+        </div>
+    </body></html>

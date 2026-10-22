@@ -1,19 +1,16 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en"><head>
+<html class="dark" lang="en">
+    <head>
         <meta charset="utf-8" />
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-        <title>Student Dashboard Overview</title>
+        <title>Student Dashboard Overview - St. Xavier's Umoid</title>
         <script
             src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
         <link
-            href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap"
+            href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap"
             rel="stylesheet" />
         <link
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
-            rel="stylesheet" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
             rel="stylesheet" />
         <script id="tailwind-config">
         tailwind.config = {
@@ -42,264 +39,341 @@
         body {
             font-family: 'Lexend', sans-serif;
             -webkit-tap-highlight-color: transparent;
+            min-height: 100dvh;
         }
         .ios-blur {
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
         }
     </style>
-        <style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
     </head>
     <body
-        class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen pb-24">
+        class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen pb-28">
         <!-- Top Navigation Bar -->
         <nav
-            class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 ios-blur flex items-center p-4 justify-between border-b border-slate-200 dark:border-slate-800">
-            <div class="flex items-center gap-3">
-                <div
-                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary"
-                    data-alt="Close up portrait of a smiling student"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAoYv0qLkYFE_cj8M0-Sx6h3JbsuT32Tub0naGgGuOBHmX7NMyquFjReStqZSVRTTewgGdmB6OW9pIWW3SYd2fmJAMwga_w0CZxi_8JQyMTr7IqPCcgbU_pzd1p0Eu94fTlktomUnta63sNOAVrVngb3e_G5PanE0V6Huja_5-u1ODVdbO7tG38sF-o-OOmP7nDrbw4nEVWa3PQf7PcNaj_qqykP9nvA2aDGaAdSz7EV6UOYFamqrFo-6dsOGLIdJE-Yndlgwutq4c");'>
+            class="sticky top-0 z-40 bg-background-light/85 dark:bg-background-dark/85 ios-blur border-b border-slate-200 dark:border-slate-800">
+            <div class="max-w-5xl mx-auto flex items-center p-4 justify-between gap-4">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary"
+                        data-alt="Close up portrait of a smiling student"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAoYv0qLkYFE_cj8M0-Sx6h3JbsuT32Tub0naGgGuOBHmX7NMyquFjReStqZSVRTTewgGdmB6OW9pIWW3SYd2fmJAMwga_w0CZxi_8JQyMTr7IqPCcgbU_pzd1p0Eu94fTlktomUnta63sNOAVrVngb3e_G5PanE0V6Huja_5-u1ODVdbO7tG38sF-o-OOmP7nDrbw4nEVWa3PQf7PcNaj_qqykP9nvA2aDGaAdSz7EV6UOYFamqrFo-6dsOGLIdJE-Yndlgwutq4c");'>
+                    </div>
+                    <div>
+                        <h1 class="text-sm font-bold leading-tight">Student
+                            Portal</h1>
+                        <p
+                            class="text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-wider font-semibold">Alex
+                            Johnson</p>
+                    </div>
                 </div>
-                <div>
-                    <h1 class="text-sm font-bold leading-tight">Student
-                        Portal</h1>
-                    <p
-                        class="text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-wider font-semibold">Alex
-                        Johnson</p>
+                <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+                    <a href="./index.html" class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors">Main Website</a>
+                    <a href="#" data-coming-soon="Courses" class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors">Courses</a>
+                    <a href="#" data-coming-soon="Grades & Transcripts" class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors">Grades</a>
+                    <a href="#" data-coming-soon="Attendance" class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors">Attendance</a>
+                    <a href="#" data-coming-soon="Library" class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors">Library</a>
                 </div>
-            </div>
-            <div class="flex gap-2">
-                <button
-                    class="flex size-10 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-white">
-                    <span
-                        class="material-symbols-outlined text-[22px]">notifications</span>
-                </button>
-                <button
-                    class="flex size-10 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-white">
-                    <span
-                        class="material-symbols-outlined text-[22px]">search</span>
-                </button>
+                <div class="flex items-center gap-2">
+                    <button
+                        type="button"
+                        data-coming-soon="Notifications"
+                        class="flex size-10 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-white hover:bg-primary hover:text-white transition-colors">
+                        <span
+                            class="material-symbols-outlined text-[22px]">notifications</span>
+                    </button>
+                    <button
+                        type="button"
+                        data-coming-soon="Dashboard Search"
+                        class="flex size-10 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-white hover:bg-primary hover:text-white transition-colors">
+                        <span
+                            class="material-symbols-outlined text-[22px]">search</span>
+                    </button>
+                    <a
+                        href="./index.html"
+                        class="text-xs font-semibold bg-slate-200 dark:bg-slate-800 hover:bg-primary hover:text-white px-3 py-2 rounded-lg transition-colors">
+                        Home
+                    </a>
+                </div>
             </div>
         </nav>
-        <!-- Welcome Header Section -->
-        <header class="p-4 pt-6">
-            <div class="flex flex-col gap-1">
-                <h2 class="text-3xl font-bold tracking-tight">Hello, Alex!
-                    👋</h2>
-                <p class="text-slate-500 dark:text-[#92a4c9]">You have 3 classes
-                    and 2 deadlines today.</p>
-            </div>
-        </header>
-        <!-- KPI Section: GPA and Progress -->
-        <section class="grid grid-cols-2 gap-4 px-4 py-2">
-            <!-- GPA Card -->
-            <div
-                class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm flex flex-col items-center justify-center text-center">
-                <div class="relative flex items-center justify-center mb-2">
-                    <svg class="size-20 -rotate-90">
-                        <circle class="text-slate-200 dark:text-slate-800"
-                            cx="40" cy="40" fill="transparent" r="34"
-                            stroke="currentColor" stroke-width="6"></circle>
-                        <circle class="text-primary" cx="40" cy="40"
-                            fill="transparent" r="34" stroke="currentColor"
-                            stroke-dasharray="213.6" stroke-dashoffset="10.7"
-                            stroke-width="6"></circle>
-                    </svg>
-                    <span class="absolute text-lg font-bold">3.85</span>
+
+        <main class="max-w-5xl mx-auto">
+            <!-- Welcome Header Section -->
+            <header class="p-4 pt-6 sm:px-6">
+                <div class="flex flex-col gap-1">
+                    <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Hello, Alex!
+                        👋</h2>
+                    <p class="text-slate-500 dark:text-[#92a4c9]">You have 3 classes
+                        and 2 deadlines today.</p>
                 </div>
-                <p
-                    class="text-xs font-medium text-slate-500 dark:text-[#92a4c9]">Academic
-                    GPA</p>
-            </div>
-            <!-- Attendance / Progress Card -->
-            <div
-                class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm flex flex-col justify-between">
-                <div class="flex justify-between items-start">
-                    <div
-                        class="p-2 bg-emerald-100 dark:bg-emerald-500/20 rounded-lg text-emerald-600 dark:text-emerald-400">
-                        <span
-                            class="material-symbols-outlined text-[20px]">calendar_today</span>
+            </header>
+
+            <!-- KPI Section: GPA and Progress -->
+            <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 px-4 sm:px-6 py-2">
+                <!-- GPA Card -->
+                <div
+                    class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm flex flex-col items-center justify-center text-center">
+                    <div class="relative flex items-center justify-center mb-2">
+                        <svg class="size-20 -rotate-90">
+                            <circle class="text-slate-200 dark:text-slate-800"
+                                cx="40" cy="40" fill="transparent" r="34"
+                                stroke="currentColor" stroke-width="6"></circle>
+                            <circle class="text-primary" cx="40" cy="40"
+                                fill="transparent" r="34" stroke="currentColor"
+                                stroke-dasharray="213.6" stroke-dashoffset="10.7"
+                                stroke-width="6"></circle>
+                        </svg>
+                        <span class="absolute text-lg font-bold">3.85</span>
                     </div>
-                    <span
-                        class="text-[10px] font-bold text-emerald-600 bg-emerald-100 px-1.5 py-0.5 rounded uppercase">On
-                        Track</span>
-                </div>
-                <div class="mt-4">
-                    <p class="text-2xl font-bold tracking-tight">94%</p>
                     <p
-                        class="text-xs font-medium text-slate-500 dark:text-[#92a4c9]">Attendance</p>
+                        class="text-xs font-medium text-slate-500 dark:text-[#92a4c9]">Academic
+                        GPA</p>
                 </div>
-            </div>
-        </section>
-        <!-- Today's Schedule -->
-        <section class="mt-4 px-4">
-            <div class="flex items-center justify-between mb-3">
-                <h3 class="text-lg font-bold tracking-tight">Today's
-                    Schedule</h3>
-                <button class="text-primary text-sm font-semibold">View
-                    Calendar</button>
-            </div>
-            <div class="space-y-3">
-                <!-- Class Card 1 -->
+                <!-- Attendance / Progress Card -->
                 <div
-                    class="bg-white dark:bg-slate-900 p-4 rounded-xl border-l-4 border-primary border-y border-r border-slate-100 dark:border-slate-800 shadow-sm flex items-center gap-4">
-                    <div
-                        class="flex flex-col items-center min-w-[50px] pr-4 border-r border-slate-100 dark:border-slate-800">
+                    class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+                    <div class="flex justify-between items-start">
+                        <div
+                            class="p-2 bg-emerald-100 dark:bg-emerald-500/20 rounded-lg text-emerald-600 dark:text-emerald-400">
+                            <span
+                                class="material-symbols-outlined text-[20px]">calendar_today</span>
+                        </div>
                         <span
-                            class="text-xs font-bold text-slate-400">10:30</span>
-                        <span class="text-xs font-bold text-slate-400">AM</span>
+                            class="text-[10px] font-bold text-emerald-600 bg-emerald-100 px-1.5 py-0.5 rounded uppercase">On
+                            Track</span>
                     </div>
-                    <div class="flex-1">
-                        <h4 class="font-bold text-sm">Advanced Physics II</h4>
+                    <div class="mt-4">
+                        <p class="text-2xl font-bold tracking-tight">94%</p>
                         <p
-                            class="text-xs text-slate-500 dark:text-[#92a4c9] mt-0.5 flex items-center gap-1">
-                            <span
-                                class="material-symbols-outlined text-[14px]">location_on</span>
-                            Science Lab 402
-                        </p>
-                    </div>
-                    <div
-                        class="size-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        <span
-                            class="material-symbols-outlined text-[18px]">bolt</span>
+                            class="text-xs font-medium text-slate-500 dark:text-[#92a4c9]">Attendance</p>
                     </div>
                 </div>
-                <!-- Class Card 2 -->
-                <div
-                    class="bg-white dark:bg-slate-900 p-4 rounded-xl border-l-4 border-amber-500 border-y border-r border-slate-100 dark:border-slate-800 shadow-sm flex items-center gap-4">
-                    <div
-                        class="flex flex-col items-center min-w-[50px] pr-4 border-r border-slate-100 dark:border-slate-800">
+            </section>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Today's Schedule -->
+                <section class="mt-4 px-4 sm:px-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-lg font-bold tracking-tight">Today's
+                            Schedule</h3>
+                        <button type="button" data-coming-soon="Full Academic Calendar" class="text-primary text-sm font-semibold hover:underline">View
+                            Calendar</button>
+                    </div>
+                    <div class="space-y-3">
+                        <!-- Class Card 1 -->
+                        <div
+                            data-coming-soon="Advanced Physics II Details"
+                            class="cursor-pointer bg-white dark:bg-slate-900 p-4 rounded-xl border-l-4 border-primary border-y border-r border-slate-100 dark:border-slate-800 shadow-sm flex items-center gap-4 hover:border-primary/60 transition-colors">
+                            <div
+                                class="flex flex-col items-center min-w-[50px] pr-4 border-r border-slate-100 dark:border-slate-800">
+                                <span
+                                    class="text-xs font-bold text-slate-400">10:30</span>
+                                <span class="text-xs font-bold text-slate-400">AM</span>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-sm">Advanced Physics II</h4>
+                                <p
+                                    class="text-xs text-slate-500 dark:text-[#92a4c9] mt-0.5 flex items-center gap-1">
+                                    <span
+                                        class="material-symbols-outlined text-[14px]">location_on</span>
+                                    Science Lab 402
+                                </p>
+                            </div>
+                            <div
+                                class="size-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                                <span
+                                    class="material-symbols-outlined text-[18px]">bolt</span>
+                            </div>
+                        </div>
+                        <!-- Class Card 2 -->
+                        <div
+                            data-coming-soon="Modern History Details"
+                            class="cursor-pointer bg-white dark:bg-slate-900 p-4 rounded-xl border-l-4 border-amber-500 border-y border-r border-slate-100 dark:border-slate-800 shadow-sm flex items-center gap-4 hover:border-amber-500/60 transition-colors">
+                            <div
+                                class="flex flex-col items-center min-w-[50px] pr-4 border-r border-slate-100 dark:border-slate-800">
+                                <span
+                                    class="text-xs font-bold text-slate-400">01:15</span>
+                                <span class="text-xs font-bold text-slate-400">PM</span>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-sm">Modern History</h4>
+                                <p
+                                    class="text-xs text-slate-500 dark:text-[#92a4c9] mt-0.5 flex items-center gap-1">
+                                    <span
+                                        class="material-symbols-outlined text-[14px]">location_on</span>
+                                    Main Auditorium
+                                </p>
+                            </div>
+                            <div
+                                class="size-8 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-500">
+                                <span
+                                    class="material-symbols-outlined text-[18px]">history_edu</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Upcoming Assignments -->
+                <section class="mt-4 px-4 sm:px-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-lg font-bold tracking-tight">Pending Tasks</h3>
                         <span
-                            class="text-xs font-bold text-slate-400">01:15</span>
-                        <span class="text-xs font-bold text-slate-400">PM</span>
+                            class="bg-primary/20 text-primary text-[10px] font-bold px-2 py-0.5 rounded-full">4
+                            TOTAL</span>
                     </div>
-                    <div class="flex-1">
-                        <h4 class="font-bold text-sm">Modern History</h4>
-                        <p
-                            class="text-xs text-slate-500 dark:text-[#92a4c9] mt-0.5 flex items-center gap-1">
-                            <span
-                                class="material-symbols-outlined text-[14px]">location_on</span>
-                            Main Auditorium
-                        </p>
+                    <div class="flex flex-col gap-3">
+                        <!-- Task 1 -->
+                        <div
+                            data-coming-soon="Calculus Problem Set #4"
+                            class="cursor-pointer flex items-center gap-3 p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800">
+                            <button
+                                type="button"
+                                class="size-6 rounded-md border-2 border-slate-300 dark:border-slate-700 flex items-center justify-center">
+                                <span
+                                    class="material-symbols-outlined text-[16px] text-white">check</span>
+                            </button>
+                            <div class="flex-1">
+                                <p class="text-sm font-medium">Calculus Problem Set
+                                    #4</p>
+                                <div class="flex gap-2 mt-1">
+                                    <span
+                                        class="text-[10px] text-rose-500 font-bold bg-rose-500/10 px-1.5 py-0.5 rounded uppercase">Due
+                                        Today</span>
+                                    <span
+                                        class="text-[10px] text-slate-400 font-bold">Math
+                                        Dept</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Task 2 -->
+                        <div
+                            data-coming-soon="History Essay Outline"
+                            class="cursor-pointer flex items-center gap-3 p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800">
+                            <button
+                                type="button"
+                                class="size-6 rounded-md border-2 border-slate-300 dark:border-slate-700 flex items-center justify-center">
+                                <span
+                                    class="material-symbols-outlined text-[16px] text-white">check</span>
+                            </button>
+                            <div class="flex-1">
+                                <p class="text-sm font-medium">History Essay Outline</p>
+                                <div class="flex gap-2 mt-1">
+                                    <span
+                                        class="text-[10px] text-amber-500 font-bold bg-amber-500/10 px-1.5 py-0.5 rounded uppercase">2
+                                        Days Left</span>
+                                    <span
+                                        class="text-[10px] text-slate-400 font-bold">History</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div
-                        class="size-8 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-500">
-                        <span
-                            class="material-symbols-outlined text-[18px]">history_edu</span>
-                    </div>
-                </div>
+                </section>
             </div>
-        </section>
-        <!-- Upcoming Assignments -->
-        <section class="mt-8 px-4">
-            <div class="flex items-center justify-between mb-3">
-                <h3 class="text-lg font-bold tracking-tight">Pending Tasks</h3>
-                <span
-                    class="bg-primary/20 text-primary text-[10px] font-bold px-2 py-0.5 rounded-full">4
-                    TOTAL</span>
-            </div>
-            <div class="flex flex-col gap-2">
-                <!-- Task 1 -->
+
+            <!-- Daily Goal Progress -->
+            <section class="mt-8 px-4 sm:px-6 pb-6">
                 <div
-                    class="flex items-center gap-3 p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800">
-                    <button
-                        class="size-6 rounded-md border-2 border-slate-300 dark:border-slate-700 flex items-center justify-center">
-                        <span
-                            class="material-symbols-outlined text-[16px] text-white">check</span>
-                    </button>
-                    <div class="flex-1">
-                        <p class="text-sm font-medium">Calculus Problem Set
-                            #4</p>
-                        <div class="flex gap-2 mt-1">
+                    class="bg-primary p-5 rounded-2xl text-white shadow-lg shadow-primary/20">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h4 class="font-bold text-lg">Daily Study Goal</h4>
+                            <p class="text-xs text-white/70">Keep it up! You're
+                                almost there.</p>
+                        </div>
+                        <div class="bg-white/20 p-2 rounded-lg">
                             <span
-                                class="text-[10px] text-rose-500 font-bold bg-rose-500/10 px-1.5 py-0.5 rounded uppercase">Due
-                                Today</span>
-                            <span
-                                class="text-[10px] text-slate-400 font-bold">Math
-                                Dept</span>
+                                class="material-symbols-outlined">trending_up</span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-xs font-bold">
+                            <span>3.5 / 5 hours</span>
+                            <span>70%</span>
+                        </div>
+                        <div
+                            class="w-full bg-white/20 h-2.5 rounded-full overflow-hidden">
+                            <div class="bg-white h-full rounded-full"
+                                style="width: 70%;"></div>
                         </div>
                     </div>
                 </div>
-                <!-- Task 2 -->
-                <div
-                    class="flex items-center gap-3 p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800">
-                    <button
-                        class="size-6 rounded-md border-2 border-slate-300 dark:border-slate-700 flex items-center justify-center">
-                        <span
-                            class="material-symbols-outlined text-[16px] text-white">check</span>
-                    </button>
-                    <div class="flex-1">
-                        <p class="text-sm font-medium">History Essay Outline</p>
-                        <div class="flex gap-2 mt-1">
-                            <span
-                                class="text-[10px] text-amber-500 font-bold bg-amber-500/10 px-1.5 py-0.5 rounded uppercase">2
-                                Days Left</span>
-                            <span
-                                class="text-[10px] text-slate-400 font-bold">History</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Daily Goal Progress -->
-        <section class="mt-8 px-4 pb-6">
-            <div
-                class="bg-primary p-5 rounded-2xl text-white shadow-lg shadow-primary/20">
-                <div class="flex justify-between items-start mb-4">
-                    <div>
-                        <h4 class="font-bold text-lg">Daily Study Goal</h4>
-                        <p class="text-xs text-white/70">Keep it up! You're
-                            almost there.</p>
-                    </div>
-                    <div class="bg-white/20 p-2 rounded-lg">
-                        <span
-                            class="material-symbols-outlined">trending_up</span>
-                    </div>
-                </div>
-                <div class="space-y-2">
-                    <div class="flex justify-between text-xs font-bold">
-                        <span>3.5 / 5 hours</span>
-                        <span>70%</span>
-                    </div>
-                    <div
-                        class="w-full bg-white/20 h-2.5 rounded-full overflow-hidden">
-                        <div class="bg-white h-full rounded-full"
-                            style="width: 70%;"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        </main>
+
         <!-- Bottom Tab Navigation -->
         <div
-            class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 ios-blur border-t border-slate-200 dark:border-slate-800 px-6 py-3 flex justify-between items-center z-50">
-            <button class="flex flex-col items-center gap-1 text-primary">
-                <span class="material-symbols-outlined"
-                    style="font-variation-settings: 'FILL' 1">grid_view</span>
-                <span class="text-[10px] font-bold">Home</span>
-            </button>
-            <button class="flex flex-col items-center gap-1 text-slate-400">
-                <span class="material-symbols-outlined">menu_book</span>
-                <span class="text-[10px] font-medium">Courses</span>
-            </button>
-            <div class="relative -top-6">
-                <button
-                    class="bg-primary size-14 rounded-full flex items-center justify-center shadow-lg shadow-primary/40 text-white">
-                    <span
-                        class="material-symbols-outlined text-[30px]">add</span>
+            class="fixed bottom-0 left-0 right-0 bg-white/85 dark:bg-slate-900/85 ios-blur border-t border-slate-200 dark:border-slate-800 px-6 py-3 z-40">
+            <div class="max-w-lg mx-auto flex justify-between items-center">
+                <button type="button" data-coming-soon="Dashboard Home" class="flex flex-col items-center gap-1 text-primary">
+                    <span class="material-symbols-outlined"
+                        style="font-variation-settings: 'FILL' 1">grid_view</span>
+                    <span class="text-[10px] font-bold">Home</span>
+                </button>
+                <button type="button" data-coming-soon="Courses" class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined">menu_book</span>
+                    <span class="text-[10px] font-medium">Courses</span>
+                </button>
+                <div class="relative -top-6">
+                    <button
+                        type="button"
+                        data-coming-soon="Quick Action"
+                        class="bg-primary size-14 rounded-full flex items-center justify-center shadow-lg shadow-primary/40 text-white hover:scale-105 transition-transform">
+                        <span
+                            class="material-symbols-outlined text-[30px]">add</span>
+                    </button>
+                </div>
+                <button type="button" data-coming-soon="Grades" class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined">analytics</span>
+                    <span class="text-[10px] font-medium">Grades</span>
+                </button>
+                <button type="button" data-coming-soon="Student Profile" class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined">person_outline</span>
+                    <span class="text-[10px] font-medium">Profile</span>
                 </button>
             </div>
-            <button class="flex flex-col items-center gap-1 text-slate-400">
-                <span class="material-symbols-outlined">analytics</span>
-                <span class="text-[10px] font-medium">Grades</span>
-            </button>
-            <button class="flex flex-col items-center gap-1 text-slate-400">
-                <span class="material-symbols-outlined">person_outline</span>
-                <span class="text-[10px] font-medium">Profile</span>
-            </button>
         </div>
-    </body></html>
+
+        <!-- Coming Soon Modal -->
+        <div id="comingSoonModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl max-w-sm w-full p-6 text-center shadow-2xl">
+                <div class="w-14 h-14 rounded-full bg-primary/20 text-primary flex items-center justify-center mx-auto mb-4">
+                    <span class="material-symbols-outlined text-3xl">rocket_launch</span>
+                </div>
+                <span class="inline-block text-[11px] font-bold uppercase tracking-widest bg-red-500/15 text-red-500 px-3 py-1 rounded-full mb-2">Coming Soon</span>
+                <h3 id="comingSoonTitle" class="text-xl font-bold text-slate-900 dark:text-white mb-2">Coming Soon!</h3>
+                <p id="comingSoonDesc" class="text-sm text-slate-500 dark:text-slate-400 mb-6">This section is currently under development for St. Xavier's College Umoid.</p>
+                <button id="closeComingSoonBtn" class="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-2.5 rounded-xl transition-all">Got It</button>
+            </div>
+        </div>
+
+        <script>
+            const modal = document.getElementById('comingSoonModal');
+            const titleEl = document.getElementById('comingSoonTitle');
+            const descEl = document.getElementById('comingSoonDesc');
+            const closeBtn = document.getElementById('closeComingSoonBtn');
+
+            function openComingSoon(name) {
+                titleEl.textContent = `${name} — Coming Soon!`;
+                descEl.textContent = `The "${name}" section is currently under development and will be available soon.`;
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            }
+            function closeComingSoon() {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+            closeBtn.addEventListener('click', closeComingSoon);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeComingSoon();
+            });
+            document.addEventListener('click', (e) => {
+                const target = e.target.closest('[data-coming-soon]');
+                if (target) {
+                    e.preventDefault();
+                    openComingSoon(target.getAttribute('data-coming-soon'));
+                }
+            });
+        </script>
+    </body>
+</html>

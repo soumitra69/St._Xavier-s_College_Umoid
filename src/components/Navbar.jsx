@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 
 const SECONDARY_NAV_ITEMS = [
   {
-    label: 'Campuses ▾',
+    label: 'Campuses',
     name: 'Campuses',
-    delay: '100',
     dropdownClass: 'dropdown-content',
     children: [
       { label: 'Main Campus', name: 'Main Campus' },
@@ -13,9 +12,8 @@ const SECONDARY_NAV_ITEMS = [
     ],
   },
   {
-    label: 'Library ▾',
+    label: 'Library',
     name: 'Library',
-    delay: '200',
     dropdownClass: 'dropdown-content',
     children: [
       { label: 'Digital Library', name: 'Digital Library' },
@@ -24,9 +22,8 @@ const SECONDARY_NAV_ITEMS = [
     ],
   },
   {
-    label: 'Student Services ▾',
+    label: 'Student Services',
     name: 'Student Services',
-    delay: '300',
     dropdownClass: 'dropdown-content',
     children: [
       { label: 'Hostel', name: 'Hostel Facilities' },
@@ -35,9 +32,8 @@ const SECONDARY_NAV_ITEMS = [
     ],
   },
   {
-    label: 'Higher Secondary ▾',
+    label: 'Higher Secondary',
     name: 'Higher Secondary',
-    delay: '400',
     dropdownClass: 'dropdown-content',
     children: [
       { label: 'Placement Cell', name: 'Placement Cell' },
@@ -46,9 +42,8 @@ const SECONDARY_NAV_ITEMS = [
     ],
   },
   {
-    label: 'Undergraduate ▾',
+    label: 'Undergraduate',
     name: 'Undergraduate',
-    delay: '500',
     dropdownClass: 'dropdown-content',
     children: [
       { label: 'Latest Posts', name: 'Latest Posts' },
@@ -57,9 +52,8 @@ const SECONDARY_NAV_ITEMS = [
     ],
   },
   {
-    label: 'Post Graduate ▾',
+    label: 'Post Graduate',
     name: 'Post Graduate',
-    delay: '600',
     dropdownClass: 'dropdown-content',
     children: [
       { label: 'Episodes', name: 'Episodes' },
@@ -68,9 +62,8 @@ const SECONDARY_NAV_ITEMS = [
     ],
   },
   {
-    label: 'Blog ▾',
+    label: 'Blog',
     name: 'Blog',
-    delay: '700',
     dropdownClass: 'dropdown-content1',
     children: [
       { label: 'Email', name: 'Blog Email' },
@@ -95,9 +88,9 @@ export default function Navbar({ onComingSoon, onNavigate }) {
   };
 
   return (
-    <>
+    <div className="site-navbar-wrapper">
       {/* Top Bar */}
-      <div className="top-bar" data-aos="fade-down" data-aos-duration="1000">
+      <div className="top-bar">
         <div className="top-bar-left">
           <div className="scroll-text">
             ● Register Now for CU Joint Campus Placement Programme &nbsp;&nbsp;
@@ -108,7 +101,7 @@ export default function Navbar({ onComingSoon, onNavigate }) {
           </div>
         </div>
 
-        <div className="top-bar-right" data-aos="fade-left" data-aos-delay="300">
+        <div className="top-bar-right">
           <a href="#call" onClick={(e) => handleLinkClick(e, 'Call Us')}>
             <i className="fa-solid fa-phone"></i> <span>Call Us</span>
           </a>
@@ -143,10 +136,9 @@ export default function Navbar({ onComingSoon, onNavigate }) {
       </div>
 
       {/* Main Header */}
-      <header data-aos="fade-up" data-aos-duration="1200">
+      <header className="main-header">
         <div
           className="logo"
-          data-aos="zoom-in-right"
           style={{ cursor: 'pointer' }}
           onClick={() => onNavigate('home')}
         >
@@ -168,11 +160,7 @@ export default function Navbar({ onComingSoon, onNavigate }) {
           <i className={menuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'}></i>
         </button>
 
-        <nav
-          className={`gradient-nav ${menuOpen ? 'nav-open' : ''}`}
-          data-aos="fade-down"
-          data-aos-delay="200"
-        >
+        <nav className={`gradient-nav ${menuOpen ? 'nav-open' : ''}`}>
           <a href="#home" onClick={(e) => handleLinkClick(e, 'Home')}>
             Home
           </a>
@@ -202,8 +190,6 @@ export default function Navbar({ onComingSoon, onNavigate }) {
         <div className={`login-callback ${menuOpen ? 'nav-open' : ''}`}>
           <div
             className="student-login btn-border-reveal"
-            data-aos="zoom-in"
-            data-aos-delay="300"
             onClick={() => onNavigate('login')}
           >
             <div className="student-login-text" style={{ fontWeight: 'bold' }}>
@@ -222,11 +208,9 @@ export default function Navbar({ onComingSoon, onNavigate }) {
 
           <div
             className="request-callback btn-border-reveall"
-            data-aos="zoom-in-left"
-            data-aos-delay="400"
             onClick={(e) => handleLinkClick(e, 'Call Us (1234 5678 9000)')}
           >
-            <span style={{ color: 'white', fontSize: '24px' }}>
+            <span style={{ color: 'white', fontSize: '20px' }}>
               <i className="fa-solid fa-phone"></i>
             </span>
             <div>
@@ -238,25 +222,20 @@ export default function Navbar({ onComingSoon, onNavigate }) {
       </header>
 
       {/* Secondary Navigation */}
-      <nav
-        className={`secondary-nav ${menuOpen ? 'nav-open' : ''}`}
-        data-aos="fade-up"
-        data-aos-duration="1200"
-      >
+      <nav className={`secondary-nav ${menuOpen ? 'nav-open' : ''}`}>
         <ul>
           {SECONDARY_NAV_ITEMS.map((item, idx) => (
             <li
               key={item.name}
               className={`dropdown ${openDropdownIndex === idx ? 'open' : ''}`}
-              data-aos="fade-up"
-              data-aos-delay={item.delay}
             >
               <a
                 className="abb"
                 href={`#${item.name.toLowerCase().replace(/\s+/g, '-')}`}
                 onClick={(e) => handleLinkClick(e, item.name, idx)}
               >
-                {item.label}
+                <span>{item.label}</span>
+                <span className="nav-caret">▾</span>
               </a>
               <div className={item.dropdownClass}>
                 {item.children.map((child) => (
@@ -273,6 +252,6 @@ export default function Navbar({ onComingSoon, onNavigate }) {
           ))}
         </ul>
       </nav>
-    </>
+    </div>
   );
 }

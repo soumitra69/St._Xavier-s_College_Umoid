@@ -10,7 +10,9 @@ export default defineConfig({
       apply: 'serve',
       enforce: 'pre',
       transformIndexHtml(html) {
-        return html.replace('./dist/bundle.js', '/src/main.jsx');
+        return html
+          .replace('./dist/bundle.js?v=3', '/src/main.jsx')
+          .replace('<link rel="stylesheet" href="./dist/bundle.css?v=3" />', '');
       },
     },
     react(),
